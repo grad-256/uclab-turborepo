@@ -1,6 +1,9 @@
-import { useState, type FC, useEffect } from "react"
+export type ColorType = {
+  name: string
+  code: string
+}
 
-const colors = [
+export const colors = [
   { name: "primary", code: "#115174" },
   { name: "primary-1", code: "#1E6A93" },
   { name: "primary-2", code: "#4F9DC5" },
@@ -65,25 +68,7 @@ const colors = [
   { name: "sns-twitter", code: "#1DA1F2" },
 ]
 
-const ColorBox = ({ color, name }) => {
-  return (
-    <div
-      className="bg-color"
-      style={{
-        backgroundColor: color,
-        color: name.startsWith("white") ? "#000" : "#fff",
-        padding: "8px",
-        margin: "4px",
-        display: "inline-block",
-        borderRadius: "4px",
-      }}
-    >
-      {name} ({color})
-    </div>
-  )
-}
-
-const colorsAlt = [
+export const colorsAlt = [
   { name: "COLOR_PRIMARY", code: "#115174" },
   { name: "COLOR_PRIMARY_1", code: "#1E6A93" },
   { name: "COLOR_PRIMARY_2", code: "#4F9DC5" },
@@ -102,24 +87,3 @@ const colorsAlt = [
   { name: "COLOR_ERROR_1", code: "#F57B73" },
   { name: "COLOR_ERROR_2", code: "rgba(245, 123, 115, 0.9)" },
 ]
-
-const index: FC = () => {
-  return (
-    <>
-      <h1>tailwind.config.js</h1>
-      <div>
-        {colors.map((color) => (
-          <ColorBox key={color.name} color={color.code} name={color.name} />
-        ))}
-      </div>
-      <h1>colorCodes</h1>
-      <div>
-        {colorsAlt.map((color) => (
-          <ColorBox key={color.name} color={color.code} name={color.name} />
-        ))}
-      </div>
-    </>
-  )
-}
-
-export default index
