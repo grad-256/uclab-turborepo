@@ -3,7 +3,7 @@ export type ColorType = {
   code: string
 }
 
-export const colors = [
+export const colors: ColorType[] = [
   { name: "primary", code: "#115174" },
   { name: "primary-1", code: "#1E6A93" },
   { name: "primary-2", code: "#4F9DC5" },
