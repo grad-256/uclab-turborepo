@@ -1,4 +1,4 @@
-import { greet, sayGoodBye } from "./greet"
+import { sayGoodBye } from "./greet"
 
 jest.mock("./greet", () => ({
   ...jest.requireActual("./greet"),
