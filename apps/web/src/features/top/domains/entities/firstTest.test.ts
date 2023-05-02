@@ -9,8 +9,4 @@ describe("初めてのテスト", () => {
     const result = firstTest(1)
     expect(result).toBe(false)
   })
-  it("1を期待している", () => {
-    const result = firstTest(1)
-    expect(result).toBe("false")
-  })
 })
