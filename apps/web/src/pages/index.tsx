@@ -1,14 +1,21 @@
+import { useQuery } from "@tanstack/react-query"
 import { FC, useEffect, useState } from "react"
 
 import { Top } from "../features/top/routes/Top"
 
-import { getDb } from "@/mocks/db"
+// import { getDb } from "@/mocks/db"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
+const fetchUsers = async () => {
+  const response = await fetch("/api/users")
+  const data = await response.json()
+  return data
+}
 
 const Index: FC = () => {
   const [users, setUsers] = useState(null)
   const [error, setError] = useState(null)
+  const { isLoading, error: errorQuery, data } = useQuery(["users"], fetchUsers)
 
   useEffect(() => {
     const getfetchData = async () => {
@@ -53,6 +60,7 @@ const Index: FC = () => {
 
   console.log(users)
   console.log(error)
+  console.log(data)
 
   return (
     <>
