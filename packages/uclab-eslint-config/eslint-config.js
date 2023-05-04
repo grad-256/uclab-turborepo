@@ -18,12 +18,12 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: "latet",
     sourceType: "module",
     project: "tsconfig.json",
   },
   rules: {
-    "react/react-in-jsx-scope": "off",
+    "react/react-in-jsx-scope": "error",
     "@next/next/no-html-link-for-pages": "off",
     "import/order": [
       "error",

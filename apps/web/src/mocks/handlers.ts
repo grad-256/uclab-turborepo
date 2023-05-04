@@ -6,16 +6,9 @@ export const delayedResponse = createResponseComposition(undefined, [context.del
 
 export const handlers = [
   rest.get("/api/users", async (req, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
-        user: {
-          id: 1,
-          name: "John Maverick",
-          email: "",
-        },
-      }),
-    )
+    // const data = await req.json()
+    const result = db.user.getAll()
+    return res(ctx.status(200), ctx.json(result))
   }),
   rest.post("/api/users", async (req, res, ctx) => {
     const data = await req.json()

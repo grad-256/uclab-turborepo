@@ -103,7 +103,7 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  preset: 'ts-jest',
+  preset: "ts-jest",
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -162,12 +162,10 @@ export default {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  testPathIgnorePatterns: ["/node_modules/", "/.next/"],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
-  testRegex: ".*\\.test\\.ts$",
+  testRegex: ".*\\.test\\.(ts|tsx)$",
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,
@@ -176,7 +174,9 @@ export default {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
@@ -195,4 +195,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}
