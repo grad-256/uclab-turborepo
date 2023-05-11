@@ -1,12 +1,12 @@
 import { Hydrate } from "@tanstack/react-query"
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import { AppProps } from "next/app"
 import React, { Suspense, useEffect } from "react"
 
 import { QueryClientProviderWrapper } from "@/lib/QueryClientProviderWrapper"
 import { initializeDb } from "@/mocks/db"
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 
-if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
+if (process.env.NODE_ENV === "development" && process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
   require("../mocks")
 }
 

@@ -9,7 +9,7 @@ type Users = {
 }
 
 const fetchUsers = async (): Promise<Users[]> => {
-  const response = await fetch("/api/users")
+  const response = await fetch("/api/me")
   const data = await response.json()
   return data
 }
@@ -23,7 +23,7 @@ type UseUsersOptions = {
 export const useUsers = ({ config = {} }: UseUsersOptions = {}) => {
   return useQuery({
     ...config,
-    queryKey: ["users"],
+    queryKey: ["me"],
     queryFn: () => fetchUsers(),
     // queryFn: () => "Hello",
   })

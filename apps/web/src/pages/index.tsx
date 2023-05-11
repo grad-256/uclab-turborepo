@@ -13,17 +13,19 @@ const Index: FC = () => {
     return <div>...loading</div>
   }
 
+  console.log(data)
+
   return (
     <>
       <Top />
-      {data?.map((v) => {
+      {/* {data?.map((v) => {
         return (
           <div key={`${v.name}-${v.id}`}>
             <p>{v.email}</p>
             <p>{v.name}</p>
           </div>
         )
-      })}
+      })} */}
       <button type="button">get button</button>
       <button type="button">post button</button>
     </>
