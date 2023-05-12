@@ -1,15 +1,16 @@
-import { renderHook, act } from "@testing-library/react"
+// import { renderHook, act } from "@testing-library/react"
 // import { rest } from "msw"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from "react"
 
 // import * as fetchUsers from "./getUsers"
-import { useUsers, fetchUsers } from "./getUsers"
+// import { useUsers, fetchUsers } from "./getUsers"
+import { fetchUsers } from "./getUsers"
 // import { createQueryWrapper } from "../../../lib/createQueryWrapper"
 import { server } from "../../../mocks/server"
-import { rest } from "msw"
-import { setupServer } from "msw/node"
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+// import { rest } from "msw"
+// import { setupServer } from "msw/node"
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 // const { queryWrapper, queryClient } = createQueryWrapper()
 
@@ -32,11 +33,11 @@ afterAll(() => server.close())
 
 describe("useStrStorage", () => {
   // 初期データを設定する
-  const init = {
-    name: "name",
-    id: 1,
-    email: "email",
-  }
+  // const init = {
+  //   name: "name",
+  //   id: 1,
+  //   email: "email",
+  // }
   // const mockFn = jest.fn()
   beforeAll(() => {
     server.listen()
