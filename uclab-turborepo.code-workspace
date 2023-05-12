@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "web",
+			"path": "apps/web"
+		},
+		{
+			"name": ".next",
+			"path": "apps/docs/.next"
+		},
+		{
+			"name": ".next",
+			"path": "apps/web/.next"
+		},
+		{
+			"name": "uclab-eslint-config",
+			"path": "packages/uclab-eslint-config"
+		},
+		{
+			"name": "tsconfig",
+			"path": "packages/tsconfig"
+		},
+		{
+			"name": "ui",
+			"path": "packages/ui"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"uclab-turborepo",
+			".next",
+			".next",
+			"uclab-eslint-config",
+			"tsconfig"
+		]
+	}
+}

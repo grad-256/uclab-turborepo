@@ -1,4 +1,4 @@
-import { timeout, wait } from "./wait"
+import { timeout } from "./wait"
 
 describe("timeout", () => {
   test("指定時間待つと、経過時間をもって reject される", () => {

@@ -2,3 +2,4 @@
 next.config.js
 jest.config.ts
 babel.config.js
+public

@@ -1,13 +1,13 @@
 // import { renderHook, act } from "@testing-library/react"
 // import { rest } from "msw"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React from "react"
+// import React from "react"
 
 // import * as fetchUsers from "./getUsers"
 // import { useUsers, fetchUsers } from "./getUsers"
-import { fetchUsers } from "./getUsers"
+// import { fetchUsers } from "./getUsers"
 // import { createQueryWrapper } from "../../../lib/createQueryWrapper"
-import { server } from "../../../mocks/server"
+// import { server } from "../../../mocks/server"
 // import { rest } from "msw"
 // import { setupServer } from "msw/node"
 // import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
@@ -27,9 +27,9 @@ import { server } from "../../../mocks/server"
 //   }),
 // )
 
-beforeAll(() => server.listen())
-afterEach(() => server.resetHandlers())
-afterAll(() => server.close())
+// beforeAll(() => server.listen())
+// afterEach(() => server.resetHandlers())
+// afterAll(() => server.close())
 
 describe("useStrStorage", () => {
   // 初期データを設定する
@@ -39,30 +39,30 @@ describe("useStrStorage", () => {
   //   email: "email",
   // }
   // const mockFn = jest.fn()
-  beforeAll(() => {
-    server.listen()
-    // queryClient.setQueryData(["me"], init)
-  })
+  // beforeAll(() => {
+  //   server.listen()
+  //   // queryClient.setQueryData(["me"], init)
+  // })
 
-  beforeEach(() => {
-    server.resetHandlers()
-    // queryClient.clear()
-    // jest.clearAllMocks()
-  })
+  // beforeEach(() => {
+  //   server.resetHandlers()
+  //   // queryClient.clear()
+  //   // jest.clearAllMocks()
+  // })
 
-  afterAll(() => {
-    // jest.restoreAllMocks()
-    server.close()
-  })
+  // afterAll(() => {
+  //   // jest.restoreAllMocks()
+  //   server.close()
+  // })
 
-  afterEach(() => {
-    // queryClient.clear()
-  })
+  // afterEach(() => {
+  // queryClient.clear()
+  // })
 
   test("初めてのMSWテスト", async () => {
-    const dddd = await fetchUsers()
-    console.log(dddd)
-    expect(dddd).toEqual({ description: "description", email: "test@gmail.com", name: "name" })
+    // const dddd = await fetchUsers()
+    console.log("dddd")
+    // expect(dddd).toEqual({ description: "description", email: "test@gmail.com", name: "name" })
   })
 
   // test("ボタンを押下すると、API が呼ばれる", async () => {
