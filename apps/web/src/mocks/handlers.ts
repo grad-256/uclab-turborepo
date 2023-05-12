@@ -1,6 +1,6 @@
 import { rest, createResponseComposition, context } from "msw"
 
-import { db, persistDb } from "@/mocks/db"
+import { db, persistDb } from "./db"
 
 export const delayedResponse = createResponseComposition(undefined, [context.delay(1000)])
 
@@ -10,7 +10,7 @@ export const handlers = [
       ctx.status(200),
       ctx.json({
         name: "name",
-        email: "email",
+        email: "test@gmail.com",
         description: "description",
       }),
     )
@@ -21,12 +21,12 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(result))
   }),
   rest.post("/api/users", async (req, res, ctx) => {
-    const data = await req.json()
-    const id = db.user.count() + 1
-    const result = db.user.create({
-      ...data,
-      id,
-    })
+    // const data = await req.json()
+    // const id = db.user.count() + 1
+    // const result = db.user.create({
+    //   ...data,
+    //   id,
+    // })
 
     // データを追加したので保存（PATCHやDELETEも同様）
     persistDb("user")

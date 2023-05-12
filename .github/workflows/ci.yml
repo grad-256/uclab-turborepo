@@ -1,0 +1,24 @@
+name: Pull requests checks
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+  push:
+    branches-ignore:
+      - production
+      - main
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-20.04
+    container: node:18.16.0
+    steps:
+      - uses: actions/checkout@v3
+      - name: Show git commit hash
+        run: |
+          echo ${{ github.sha }}
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn test

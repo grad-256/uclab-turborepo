@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 
-import { type queryConfig } from "@/lib/react-query"
+import { QueryConfig } from "../../../lib/reactQuery"
+import "cross-fetch/polyfill"
 
 type Users = {
   id: number
@@ -8,7 +9,7 @@ type Users = {
   name: string
 }
 
-const fetchUsers = async (): Promise<Users[]> => {
+export const fetchUsers = async (): Promise<Users[]> => {
   const response = await fetch("/api/me")
   const data = await response.json()
   return data
@@ -17,7 +18,7 @@ const fetchUsers = async (): Promise<Users[]> => {
 // type QueryFnType = typeof fetchUsers
 
 type UseUsersOptions = {
-  config?: typeof queryConfig
+  config?: typeof QueryConfig
 }
 
 export const useUsers = ({ config = {} }: UseUsersOptions = {}) => {
