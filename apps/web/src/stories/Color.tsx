@@ -1,6 +1,6 @@
 import React, { type FC } from "react"
 
-import { type ColorType, colors, colorsAlt } from "@/config/color"
+import { type ColorType, colors, colorsAlt } from "@/config/constants/color"
 
 const ColorBox = ({ code, name }: ColorType) => {
   return (
