@@ -3,7 +3,7 @@ module.exports = {
   // root: true,
   plugins: ["eslint-plugin-import", "eslint-plugin-react", "@typescript-eslint"],
   extends: [
-    "next",
+    // "next",
     "eslint:recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
