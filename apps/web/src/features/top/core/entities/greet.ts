@@ -1,4 +1,4 @@
-export function sayGoodBye(name: string) {
+export function sayGoodBye() {
   throw new Error("Not implemented")
 }
 
