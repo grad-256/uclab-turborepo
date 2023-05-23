@@ -13,6 +13,8 @@ const Index: FC = () => {
     return <div>...loading</div>
   }
 
+  console.log(data)
+
   return (
     <>
       <Top />
